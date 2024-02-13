@@ -110,7 +110,6 @@ export class CdkSevicecatalogAppStack extends Stack {
       for (let i = 0; i < roles.length; i++) {
         let roleIns = Role.fromRoleName(this, id + "_role_" + i, roles[i])
         port.giveAccessToRole(roleIns)
-
       }
     } 
     if(users!=undefined){
