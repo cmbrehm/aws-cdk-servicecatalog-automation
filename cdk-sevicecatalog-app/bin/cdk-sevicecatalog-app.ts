@@ -19,9 +19,9 @@
 import 'source-map-support/register';
 import {App} from 'aws-cdk-lib';
 import { CdkSevicecatalogAppStack } from '../lib/cdk-sevicecatalog-app-stack';
-import { resolve } from 'path';
-import { readFileSync } from 'fs';
-import { env } from 'process';
+import { resolve } from 'node:path';
+import { readFileSync } from 'node:fs';
+import { env } from 'node:process';
 const app = new App();
 const sourcePath = app.node.tryGetContext("source")
 const configLoc = resolve(__dirname, sourcePath);
@@ -33,8 +33,8 @@ new CdkSevicecatalogAppStack(app, 'CdkSevicecatalogAppStack', {
   products: config.products,
   tagOption: config.tagOption,
   env:{
-    account:process.env.CDK_DEPLOY_ACCOUNT||env.CDK_DEFAULT_ACCOUNT,
-    region:process.env.CDK_DEPLOY_REGION||env.CDK_DEFAULT_REGION
+//    account:process.env.CDK_DEPLOY_ACCOUNT||env.CDK_DEFAULT_ACCOUNT,
+ //   region:process.env.CDK_DEPLOY_REGION||env.CDK_DEFAULT_REGION
   }
 });
 
