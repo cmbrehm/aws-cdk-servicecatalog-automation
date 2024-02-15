@@ -7,7 +7,7 @@ This Pattern demonstrates the approach for provisioning AWS Service Catalog Port
 - AWS Identity and Access Management Roles and permissions with Access to AWS Service Catalog, AWS CloudFormation 
 
 # Product Versions
-- AWS CDK v2 2.27.0
+- AWS CDK v2
 
 
 # Target Technology Stack
@@ -56,11 +56,7 @@ cdk --version
 ```
 If AWS CDK Toolkit  is not installed then execute 
 ```
-npm install -g aws-cdk@2.27.0
-```
-It AWS CDK Toolkit  version is lower than 2.27.0 then update to 2.27.0 
-```
-npm install -g aws-cdk@2.27.0 --force
+npm install -g aws-cdk
 ```
 
 
@@ -82,7 +78,7 @@ Export the following variables which refer to the AWS Account and region where t
 export CDK_DEFAULT_ACCOUNT=<12 Digit AWS Account Number>
 
 export CDK_DEFAULT_REGION=<AWS Region>
-AWS Credentials for CDK can be provided through environment variables.
+AWS Credentials for CDK can be provided through environment variables, such as AWS_PROFILE
 
 
 ## Parameters Setup 
